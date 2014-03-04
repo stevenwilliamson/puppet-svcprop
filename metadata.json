@@ -1,0 +1,56 @@
+{
+  "source": "UNKNOWN",
+  "version": "1.0.0",
+  "author": "Philip Brown",
+  "project_page": "http://www.bolthole.com",
+  "checksums": {
+    "lib/puppet/provider/svcprop/solaris.rb": "02e21f0c099b8978e0f1b412345bbc14",
+    "lib/puppet/type/svcprop.rb": "79dee993dfde22b2fb135bbbf6cd47ac",
+    "README": "0815fc908e6b765876e9dff9bc0f82cd",
+    "metadata.json": "d34d0b70aba36510fbc2df4e667479ef",
+    "Modulefile": "426111fab7ad08af7a33a91e43c65bdf"
+  },
+  "dependencies": [
+
+  ],
+  "types": [
+    {
+      "providers": [
+        {
+          "name": "solaris",
+          "doc": "Provider for Solaris svcprop\n\nRequired binaries: `/usr/sbin/svccfg`, `/usr/sbin/svcadm`, `/usr/bin/svcprop`.  Default for `operatingsystem` == `solaris`."
+        }
+      ],
+      "name": "svcprop",
+      "parameters": [
+        {
+          "name": "name",
+          "doc": "Mnemonic name"
+        },
+        {
+          "name": "fmri",
+          "doc": "Name of the FMRI that the property is associated with"
+        },
+        {
+          "name": "property",
+          "doc": "Specific name of the property to be set or checked"
+        },
+        {
+          "name": "value",
+          "doc": "value to set/check for the named property"
+        }
+      ],
+      "doc": "Handle `system properties`. Inspired by solaris svcprop, and\nprimarily implemented for that purpose, although could theoretically be\nused by other systems as well",
+      "properties": [
+        {
+          "name": "ensure",
+          "doc": "The basic property that the resource should be in.  Valid values are `present`, `absent`."
+        }
+      ]
+    }
+  ],
+  "summary": "This provides a resource type to manage SMF/SVC properties.",
+  "description": "UNKNOWN",
+  "license": "UNKNOWN",
+  "name": "ppbrown-svcprop"
+}
